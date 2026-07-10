@@ -16,7 +16,7 @@ else:
 MC_IP = os.environ["MC_IP"]
 MC_PORT = int(os.environ.get("MC_PORT", "25565"))
 
-server = JavaServer.lookup(f"{MC_IP}:{MC_PORT}")
+server = JavaServer(MC_IP, MC_PORT)
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
